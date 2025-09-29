@@ -1,0 +1,22 @@
+site_name: CMU 11781/02741 Generative AI for Biomedicine 2025 Fall Assignments
+site_url: https://https://genaibiomed.github.io/GenAIBioMedAssignment1
+theme:
+  name: material
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.arithmatex
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
