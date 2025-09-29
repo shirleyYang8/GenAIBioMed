@@ -28,7 +28,8 @@ pad_idx = alphabet.pad()
 
 model = ProGenForCausalLM.from_pretrained(os.path.join(PRETRAINED_MODEL_PATH, PRETRAINED_MODEL)).to('cuda')
 # TODO: Define optimizer, please using Adam
-raise NotImplementedError("Need to be implemented for Adam optimizer")
+optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+#raise NotImplementedError("Need to be implemented for Adam optimizer")
 
 decay_factor = LEARNING_RATE * LR_SCHEDULER_UPDATES ** 0.5
 
@@ -45,7 +46,8 @@ for epoch in range(EPOCHS):
         
         # Forward pass
         # TODO: Get model outputs based on inputs - calling model forward
-        raise NotImplementedError("Need to be implemented for calling model forward function")
+        outputs = model(inputs)
+        #raise NotImplementedError("Need to be implemented for calling model forward function")
         
         # Calculate loss
         loss = torch.mean(-torch.log(outputs.gather(dim=-1, index=targets.unsqueeze(-1))).squeeze(-1) * (targets!=pad_idx))
@@ -69,7 +71,8 @@ for epoch in range(EPOCHS):
 
         # Forward pass
         # TODO: Get model outputs based on inputs - calling model forward
-        raise NotImplementedError("Need to be implemented for calling model forward function")
+        outputs = model(inputs)
+        #raise NotImplementedError("Need to be implemented for calling model forward function")
 
         loss = torch.mean(-torch.log(outputs.gather(dim=-1, index=targets.unsqueeze(-1))).squeeze(-1) * (targets!=pad_idx))
         valid_losses.append(loss.item())
