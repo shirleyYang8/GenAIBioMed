@@ -1,7 +1,7 @@
 import os 
 import numpy as np
 import torch
-import torch.nn as nn 
+import torch.nn as nn
 
 from dataset import get_dataloader, alphabet
 from model import ProGenForCausalLM
