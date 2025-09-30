@@ -1,7 +1,7 @@
 import os 
 import numpy as np
 import torch
-import torch.nn as nn 
+import torch.nn as nn
 
 from dataset import get_dataloader, alphabet
 from model import ProGenForCausalLM
@@ -12,7 +12,7 @@ torch.manual_seed(0)
 # Hyperparameters! Don't change
 LEARNING_RATE = 1e-3
 LR_SCHEDULER_UPDATES = 4000
-EPOCHS = 10
+EPOCHS = 2
 
 # you might modify based on the computing resources you used
 BATCH_SIZE = 32
