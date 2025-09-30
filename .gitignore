@@ -1,0 +1,7 @@
+Assignment1/pretrained_model/
+Assignment1/models/
+Assignment1/outputs/
+**/__pycache__/
+*.pt
+*.bin
+*.tar.gz
