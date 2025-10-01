@@ -12,8 +12,7 @@ torch.manual_seed(0)
 # Hyperparameters! Don't change
 LEARNING_RATE = 1e-3
 LR_SCHEDULER_UPDATES = 4000
-EPOCHS = 2
-
+EPOCHS = 10
 # you might modify based on the computing resources you used
 BATCH_SIZE = 32
 

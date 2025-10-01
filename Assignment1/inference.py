@@ -24,6 +24,7 @@ DECODING_STRATEGY = "greedy" # you can also try topp
 
 test_dataloader = get_dataloader(DATA_PATH, 'test', BATCH_SIZE, shuffle=False)
 eos_idx = alphabet.eos()
+os.makedirs(OUTPUT_RESULT_PATH, exist_ok=True)
 fw = open(os.path.join(OUTPUT_RESULT_PATH, OUTPUT_FILE_NAME), 'w')
 
 model = ProGenForCausalLM.from_pretrained(os.path.join(PRETRAINED_MODEL_PATH, PRETRAINED_MODEL)).to('cuda')
